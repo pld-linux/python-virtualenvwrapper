@@ -42,7 +42,7 @@ introducing conflicts in their dependencies.
 %setup -q -n %{module}-%{version}
 
 %build
-%{__python} setup.py build
+%py_build
 
 %if %{with tests}
 tox -e py27
@@ -50,10 +50,7 @@ tox -e py27
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install \
-	--skip-build \
-	--optimize=2 \
-	--root=$RPM_BUILD_ROOT
+%py_install
 
 %py_postclean
 

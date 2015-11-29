@@ -15,7 +15,7 @@ URL:		http://pypi.python.org/pypi/virtualenvwrapper
 BuildRequires:	python-pbr
 BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 %if %{with tests}
 BuildRequires:	python-stevedore
 BuildRequires:	python-virtualenv
